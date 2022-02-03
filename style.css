@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    position: relative;
+    top: 20px;
+    background: linear-gradient(to top left, powderblue, pink);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 3px solid black;
+    animation-name: fon;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.time{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    color: black;
+}
+.time-top{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    top: 2%;
+
+}
+.time-bottom{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 92%;
+}
+.time-left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+.time-right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 94%;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border: 3px solid;
+    border-radius: 50%;
+    background: linear-gradient(to top left, powderblue, pink);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 290px;
+
+}
+.big-arrow{
+    width: 30px;
+    height: 250px;
+    background: linear-gradient(45deg, rgb(243, 120, 120), rgb(162, 162, 255));
+    border: none;
+    border-radius: 70%;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-48%);
+    top: 50px;
+    transform-origin: bottom center;
+    animation: clock 60s linear infinite;
+}
+.smal-arrow{
+    width: 30px;
+    height: 150px;
+    background: linear-gradient( 45deg,rgb(162, 162, 255), rgb(243, 120, 120));
+    border: none;
+    border-radius: 70%;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-48%);
+    top: 150px;
+    transform-origin: bottom center;
+    animation: clock 3600s linear infinite;
+}
+@keyframes clock {
+    0% {
+      transform: rotate(0deg);
+    }
+    10%{
+        background: linear-gradient(45deg, rgb(243, 120, 120), rgb(162, 162, 255));
+    }
+    20%{
+        background: linear-gradient(to top left, rgb(162, 162, 255), rgb(243, 120, 120));
+    }
+    30%{
+        background: linear-gradient(45deg, rgb(243, 120, 120), rgb(162, 162, 255));
+    }
+    40%{
+        background: linear-gradient(to top left, rgb(162, 162, 255), rgb(243, 120, 120));
+    }
+    50%{
+        background: linear-gradient(45deg, rgb(243, 120, 120), rgb(162, 162, 255));
+    }
+    60%{
+        background: linear-gradient(to top left, rgb(162, 162, 255), rgb(243, 120, 120));
+    }
+    70%{
+        background: linear-gradient(45deg, rgb(243, 120, 120), rgb(162, 162, 255));
+    }
+    80%{
+        background: linear-gradient(to top left, rgb(162, 162, 255), rgb(243, 120, 120));
+    }
+    90%{
+        background: linear-gradient(45deg, rgb(243, 120, 120), rgb(162, 162, 255));
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes fon{
+    25%{
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    50%{
+        background: linear-gradient(to top left, powderblue, pink);
+    }
+    75%{
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+}
